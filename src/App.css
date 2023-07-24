@@ -1,0 +1,40 @@
+/* App.css */
+
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Responsive styles for App.js */
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+}
+
+/* Responsive styles using media queries */
+@media screen and (max-width: 600px) {
+  .center-content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .center-content {
+    width: 90%;
+    font-size: 14px;
+  }
+}

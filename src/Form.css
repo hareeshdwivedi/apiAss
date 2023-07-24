@@ -1,0 +1,110 @@
+/* General styles for the form */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+p {
+  margin-top: 10px;
+  color: #f00;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.success {
+  color: #4caf50;
+}
+
+/* Animation for success/error message */
+.success,
+p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation for form shake */
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  80% {
+    transform: translateX(5px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.4s;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+  form {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  select {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
